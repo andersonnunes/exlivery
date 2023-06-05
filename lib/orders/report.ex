@@ -2,7 +2,7 @@ defmodule Exlivery.Orders.Report do
   alias Exlivery.Orders.Agent, as: OrderAgent
   alias Exlivery.Orders.{Item, Order}
 
-  def create(filename \\ "report.csv") do
+  def create(filename) do
     order_list = build_order_list()
 
     File.write(filename, order_list)
